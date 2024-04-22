@@ -61,7 +61,7 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Webpack',
+            title: 'First Drink',
             template: './src/index.html'
         }),
         new MiniCssExtractPlugin({

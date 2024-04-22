@@ -1,5 +1,2 @@
-import {body} from './js/functions.js';
+import './css/normalize.css';
 import './styles.css';
-
-const name = 'Henry Vega';
-body(name);
