@@ -1,4 +1,5 @@
 import { GameClass, GameLanguageClass } from './js/class.js';
+import { characterSelection } from './js/functions.js';
 import './css/normalize.css';
 import './styles.css';
 
@@ -14,4 +15,5 @@ export const Game = new GameClass(version), GameLanguage = new GameLanguageClass
 btnPlay.addEventListener('click',() =>{
     body.replaceChildren();
     Game.characterSelection();
+    characterSelection();
 });

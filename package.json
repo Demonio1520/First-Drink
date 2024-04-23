@@ -1,6 +1,6 @@
 {
   "name": "First Drink",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Initial Webpack Proyect",
   "main": "index.js",
   "scripts": {

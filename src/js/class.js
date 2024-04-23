@@ -7,9 +7,23 @@ export class GameClass {
     }
     characterSelection = () => {
         body.innerHTML = `
+        <!-- Site Header -->
         <header class="header-selection">
             <p>Select Your Character</p>
-        </header>`;
+        </header>
+
+        <!-- Site Main -->
+        <main class="main-selection">
+            <div class="character-selection"></div>
+
+            <i id="change-arrow" class="fa-solid fa-caret-down arrow"></i>
+
+            <div class="div-character-name">
+                <input id="name" type="text" placeholder="Character's Name">
+                <button id="btn-confirm" class="btn btn-primary">Confirm</button>
+            </div>
+        </main>
+        `;
     }
 }
 export class GameLanguageClass {
