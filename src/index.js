@@ -6,10 +6,12 @@ export const body = document.querySelector('body'),
 header = document.querySelector('header'),
 main = document.querySelector('main'),
 footer = document.querySelector('footer'),
+divVersion = document.querySelector('.version'),
 btnPlay = document.querySelector('#btn-play');
-export let language = 0;
-export const Game = new GameClass(), GameLanguage = new GameLanguageClass(language);
+export let version = 'V-1.0.5', language = 0;
+export const Game = new GameClass(version), GameLanguage = new GameLanguageClass(language);
 
 btnPlay.addEventListener('click',() =>{
     body.replaceChildren();
+    Game.characterSelection();
 });

@@ -1,8 +1,16 @@
 import { menuTitle, menuButtons, menuFooter } from './language.js';
-import { header, main, footer } from '../index.js';
+import { body, header, main, footer, divVersion } from '../index.js';
 
 export class GameClass {
-
+    constructor(version) {
+        divVersion.innerHTML = `<p>${version}</p>`;
+    }
+    characterSelection = () => {
+        body.innerHTML = `
+        <header class="header-selection">
+            <p>Select Your Character</p>
+        </header>`;
+    }
 }
 export class GameLanguageClass {
     constructor(language) {

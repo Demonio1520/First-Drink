@@ -16,11 +16,19 @@ body {
 .header-menu {
     align-items: center;
     display: flex;
+    flex-direction: column;
     font-size: 4rem;
     font-weight: bold;
     justify-content: center;
     height: 20vh;
+    text-align: center;
     text-transform: uppercase;
+}
+.header-menu p {
+margin: 0;
+}
+.version {
+    font-size: 1.5rem;
 }
 
 /* Main Menu */
@@ -53,5 +61,22 @@ body {
     width: 100%;
 }
 .footer-menu p {
+    margin: 0;
+}
+
+/* Selection Site */
+
+.header-selection {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    font-weight: bold;
+    justify-content: center;
+    height: 20vh;
+    text-align: center;
+    text-transform: uppercase;
+}
+.header-selection p {
     margin: 0;
 }
