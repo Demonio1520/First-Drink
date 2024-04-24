@@ -1,11 +1,8 @@
-export function characterSelection(goblin = 1) {
-    const card = document.querySelector('.character-selection'),
-    arrow = document.querySelector('#change-arrow'),
-    name = document.querySelector('#name');
-    card.innerHTML = `<img src="./assets/goblins/goblin_${goblin}.png" alt="Goblin">`;
+import { Load, Save, players } from "../index.js";
 
-    arrow.addEventListener('click',() =>{
-        (goblin == 10) ? goblin = 1 : goblin += 1;
-        characterSelection(goblin);
-    });
+export function reload() {
+    location.reload(true);
+}
+export function playerCard(character) {
+    return `<img src="./assets/goblins/goblin_${character}.png" alt="Goblin">`
 }
