@@ -1,6 +1,7 @@
 :root {
     --black: #000000;
     --grey: #555555;
+    --wood: #fdc06d;
 }
 
 html {
@@ -98,10 +99,8 @@ margin: 0;
 .character-selection {
     border: 2px solid var(--black);
     border-radius: 2%;
-    /* bottom: 5rem; */
     height: 45vh;
     margin: 0 auto;
-    /* position: relative; */
     width: 80%;
 }
 .character-selection img {
@@ -137,4 +136,97 @@ margin: 0;
     margin: 0 auto;
     max-width: 50%;
     text-transform: uppercase;
+}
+
+/* Game Site */
+
+/* Header Game */
+.header-game {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    font-weight: bold;
+    height: 10vh;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+.header-game p {
+    margin: 0;
+}
+
+/* Main Game */
+.main-game {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    justify-content: center;
+}
+
+.deck {
+    border: 2px solid var(--black);
+    border-radius: 2%;
+    height: 25vh;
+    margin: 0 auto;
+    width: 35%;
+}
+.deck img {
+    height: 100%;
+    width: 100%;
+}
+
+.drew-card {
+    border: 2px solid var(--black);
+    border-radius: 2%;
+    height: 45vh;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.footer-game {
+    bottom: 0;
+    height: 30vh;
+    position: absolute;
+    width: 100%;
+}
+
+.player {
+    align-items: center;
+    display: flex;
+}
+.player-img {
+    border-radius: 100%;
+    border: 2px solid var(--black);
+    height: 10vh;
+    width: 20%;
+}
+.player-img img {
+    height: 100%;
+    width: 100%;
+}
+
+/* Player Cards */
+.div-player-cards {
+    align-items: center;
+    background-color: var(--wood);
+    border-top: 2px solid var(--black);
+    bottom: 0;
+    display: flex;
+    height: 20vh;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
+.player-card {
+    border: 2px solid var(--black);
+    border-radius: 2%;
+    height: 15vh;
+    margin: 0 .5rem;
+    width: calc(25% - 1rem);
+}
+.player-card img {
+    height: 100%;
+    width: 100%;
 }

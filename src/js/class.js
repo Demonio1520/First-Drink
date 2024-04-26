@@ -1,4 +1,5 @@
-import { body, Load, Game, GameLanguage, language } from '../index.js';
+import { body, characters, GameLanguage, language, players } from '../index.js';
+import { playerTurn } from './functions.js';
 
 export class GameClass {
     constructor(version,site,language) {
@@ -8,6 +9,9 @@ export class GameClass {
             break;
             case 'selection':
                 this.siteSelection();
+            break;
+            case 'game':
+                this.siteGame();
             break;
         }
     }
@@ -52,7 +56,47 @@ export class GameClass {
                 <input id="name" type="text" placeholder="${GameLanguage.selectionInput(language)}">
                 <button id="btn-confirm" class="btn btn-primary">${GameLanguage.selectionButtons(language,0)}</button>
             </div>
-        </main>`;
+        </main>
+        
+        <!-- Site Footer -->
+        <footer>
+            <i id="numberPlayers" class="fa-solid fa-user">0</i>
+            <button id="btn-start" class="btn btn-primary">${GameLanguage.selectionButtons(language,1)}</button>
+        </footer>`;
+    }
+    siteGame = () => {
+        body.innerHTML = `
+        <!-- Site Header -->
+        <header class="header-game">
+            <p>Turno de <span>${players[0]}</span></p>
+        </header>
+
+        <!-- Site Main -->
+        <main class="main-game">
+            <div class="deck"><img src="./assets/img/card_back.jpg" alt="Deck"></div>
+            <button id="btn-draw" class="btn btn-primary mt-2">Tomar</button>
+        </main>
+        
+        <!-- Site Footer -->
+        <footer class="footer-game">
+            <div class="player">
+                <div class="player-img"><img src="./assets/goblins/goblin_${characters[0]}.png" alt="Goblin"></div>
+                <p>${players[0]}<p>
+                <i class="fa-solid fa-flask">1</i>
+            </div>
+
+            <div class="div-player-cards">
+                <div class="player-card"><img src="./assets/img/card_back.jpg" alt="Drink"></div>
+                <div class="player-card"><img src="./assets/img/card_back.jpg" alt="Drink"></div>
+                <div class="player-card"><img src="./assets/img/card_back.jpg" alt="Drink"></div>
+                <div class="player-card"><img src="./assets/img/card_back.jpg" alt="Drink"></div>
+            </div>
+        </footer>`;
+    }
+    createDeck = () => {
+        let deck = ['Beben todos los goblins de color verde','Beben todos los goblins con armas','beben los goblins que no tengan armas',
+        'beben solo los goblins con arco', 'beben los goblins que lleven alguna cuchilla o espada'];
+        return deck;
     }
 }
 export class GameLanguageClass {
@@ -93,7 +137,7 @@ export class SaveClass {
         localStorage.setItem('players',JSON.stringify(players));
     }
     saveCharacters = (goblins) => {
-        localStorage.setItem('goblins',JSON.stringify(goblins));
+        localStorage.setItem('characters',JSON.stringify(goblins));
     }
 }
 export class LoadClass {
@@ -108,8 +152,8 @@ export class LoadClass {
         } else { return []; }
     }
     loadCharacters = () => {
-        if (localStorage.getItem('goblins')) {
-            return JSON.parse(localStorage.getItem('goblins'));
+        if (localStorage.getItem('characters')) {
+            return JSON.parse(localStorage.getItem('characters'));
         } else { return []; }
     }
 }
