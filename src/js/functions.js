@@ -12,3 +12,12 @@ export function playerTurn(turn = 0) {
     document.querySelectorAll('img')[1].src = `./assets/goblins/goblin_${characters[turn]}.png`;
     return turn += 1;
 }
+export function createBubbles() {
+    for (let i = 0; i < 1; i++) {
+        const bubbles = document.querySelector('.bubbles'),
+        span = document.createElement('span');
+        let speed = [1,2,3,4,5,6,7,8,9,10];
+        span.style = 'i--: 5';
+        bubbles.append(span);
+    }
+}

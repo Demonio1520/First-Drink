@@ -28,11 +28,43 @@ export class GameClass {
     
         <!-- Site Main -->
         <main class="main-menu">
+            <div class="bubbles">
+                <span style="--i:5;"></span>
+                <span style="--i:6;"></span>
+                <span style="--i:8;"></span>
+                <span style="--i:4;"></span>
+                <span style="--i:3;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:4"></span>
+                <span style="--i:10;"></span>
+                <span style="--i:9;"></span>
+                <span style="--i:1;"></span>
+                <span style="--i:3;"></span>
+                <span style="--i:6;"></span>
+                <span style="--i:12;"></span>
+                <span style="--i:10;"></span>
+                <span style="--i:7;"></span>
+                <span style="--i:5;"></span>
+                <span style="--i:9;"></span>
+                <span style="--i:4;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:5;"></span>
+                <span style="--i:6;"></span>
+                <span style="--i:8;"></span>
+                <span style="--i:4;"></span>
+                <span style="--i:3;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:4"></span>
+                <span style="--i:10;"></span>
+                <span style="--i:9;"></span>
+                <span style="--i:1;"></span>
+            </div>
+
             <button id="btn-play" class="btn btn-primary">${GameLanguage.menuButtons(language,0)}</button>
             <button id="btn-options" class="btn btn-primary">${GameLanguage.menuButtons(language,1)}</button>
             <button id="btn-rules" class="btn btn-primary">${GameLanguage.menuButtons(language,2)}</button>
         </main>
-    
+
         <!-- Site Footer -->
         <footer class="footer-menu">
             <p>${GameLanguage.menuFooter(language)} <span>Henry Vega | Jackson Vega</span></p>

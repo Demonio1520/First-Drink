@@ -5,7 +5,7 @@ import './styles.css';
 
 export const body = document.querySelector('body');
 export const Save = new SaveClass(), Load = new LoadClass();
-export let version = 'V-1.0.8', site = Load.loadSite(), language = 1, players = Load.loadPlayers(), characters = Load.loadCharacters();
+export let version = 'V-1.1.0', site = Load.loadSite(), language = 1, players = Load.loadPlayers(), characters = Load.loadCharacters();
 export const GameLanguage = new GameLanguageClass(), Game = new GameClass(version,site,language);
 
 if (site == 'menu') {

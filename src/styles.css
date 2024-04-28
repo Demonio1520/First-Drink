@@ -12,8 +12,9 @@ html {
     box-sizing: inherit;
 }
 body {
-    max-height: 100vh;
     font-size: 1.6rem;
+    max-height: 100vh;
+    overflow: hidden;
 }
 
 /* Site Menu */
@@ -24,14 +25,18 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 4rem;
+    color: #ffffff;
     font-weight: bold;
     justify-content: center;
     height: 20vh;
     text-align: center;
     text-transform: uppercase;
+    background: linear-gradient(135deg, #0c192c 0%,#4fc3dc 10%,#0c192c 20%,#0c192c 30%,#4fc3dc 40%,#0c192c 50%,#0c192c 60%,#4fc3dc 70%,#0c192c 80%,#0c192c 90%,#4fc3dc 100%);
+    
 }
 .header-menu p {
 margin: 0;
+
 }
 .version {
     font-size: 1.5rem;
@@ -39,34 +44,82 @@ margin: 0;
 
 /* Main Menu */
 .main-menu {
+    background-color: #0c192c;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 60vh;
+    height: 70vh;
+    overflow: hidden;
 }
 .main-menu button {
     font-size: 2rem;
     font-weight: bold;
     margin: 2rem auto 0 auto;
     padding: 1rem 0;
+    height: 5rem;
     text-transform: uppercase;
     width: 50%;
+    z-index: 1;
+}
+.btn {
+    overflow: hidden;
+    transition: 0.2s;
+}
+.btn:hover{
+    background-color: #ff2d75;
+    box-shadow: 0 0 10px #ff2d75, 0 0 40px #ff2d75, 0 0 80px #ff2d75;
+    transition-delay: .5s;
 }
 .main-menu button:last-of-type {
     margin-bottom: 2rem;
+    
 }
-
-/* Footer Menu */
-.footer-menu {
-    bottom: 0;
+.bubbles{
+    position: absolute;
+    max-height: 100%;
     display: flex;
     flex-direction: column;
-    text-align: center;
+}
+.bubbles span {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background-color: #4fc3dc;
+    margin: 0 3px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #4fc3dc44, 0 0 50px #4dc3dc, 0 0 100px #4dc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(10s / var(--i));
+}
+.bubbles span:nth-child(even){
+    background-color: #ff2d75;
+    box-shadow: 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4dc3dc;
+}
+@keyframes animate{
+    0%
+    {
+        transform: translate(100vh) scale(0);
+    }
+    100%
+    {
+        transform: translate(-30vh) scale(1);
+    }
+}
+/* Footer Menu */
+.footer-menu {
+    background: linear-gradient(135deg, #0c192c 0%,#4fc3dc 10%,#0c192c 20%,#0c192c 30%,#4fc3dc 40%,#0c192c 50%,#0c192c 60%,#4fc3dc 70%,#0c192c 80%,#0c192c 90%,#4fc3dc 100%);
+    bottom: 0;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
     position: absolute;
+    text-align: center;
     width: 100%;
 }
 .footer-menu p {
     margin: 0;
+    
 }
 
 /* Selection Site */
@@ -99,8 +152,10 @@ margin: 0;
 .character-selection {
     border: 2px solid var(--black);
     border-radius: 2%;
+    /* bottom: 5rem; */
     height: 45vh;
     margin: 0 auto;
+    /* position: relative; */
     width: 80%;
 }
 .character-selection img {
@@ -138,25 +193,8 @@ margin: 0;
     text-transform: uppercase;
 }
 
-/* Game Site */
-
-/* Header Game */
-.header-game {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    font-size: 3rem;
-    font-weight: bold;
-    height: 10vh;
-    justify-content: center;
-    text-align: center;
-    text-transform: uppercase;
-}
-.header-game p {
-    margin: 0;
-}
-
 /* Main Game */
+
 .main-game {
     align-items: center;
     display: flex;
